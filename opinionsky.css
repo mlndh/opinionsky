@@ -1,0 +1,176 @@
+    body {
+        font-family: 'Dosis', sans-serif;
+        margin: auto;
+        padding: 0.2rem;
+        display: inline-block;
+    }
+    
+    header {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .userSignedIn .hideWhenSignedIn {
+        display: none;
+    }
+    
+    .userSignedOut .hideWhenSignedOut {
+        display: none;
+    }
+    
+    h1,
+    p {
+        text-align: center;
+    }
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .bubble {
+        position: relative;
+        background: rgb(78, 178, 231);
+        color: white;
+        border-radius: 14rem;
+        min-height: 3rem;
+        min-width: 6rem;
+        max-width: 25rem;
+        text-align: center;
+        padding: 2rem;
+        margin: 0.8rem;
+        box-shadow: 5px 10px 18px #888888;
+    }
+    
+    .bubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: rgb(78, 178, 231);
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -10px;
+        margin-bottom: -20px;
+    }
+    
+    img {
+        width: 20px;
+        position: absolute;
+        right: 2rem;
+    }
+    
+    .hover:hover {
+        cursor: pointer;
+    }
+    
+    span {
+        float: right;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    .signInForm {
+        position: fixed;
+        top: 15%;
+        background-color: white;
+        height: 50%;
+        padding: 3rem;
+    }
+    
+    textarea {
+        width: 50rem;
+        height: 150px;
+        border: none;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+        outline: none;
+        cursor: text;
+    }
+    
+    form {
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 2rem;
+        padding: 12px 20px;
+        margin: 5rem;
+    }
+    
+    form:valid {
+        border-color: green;
+    }
+    
+    input[type="reset"] {
+        background-image: url("img/trash.svg");
+        background-repeat: no-repeat;
+        border: none;
+    }
+    
+    input[type="submit"] {
+        background-image: url("img/paper-plane.svg");
+        background-repeat: no-repeat;
+        border: none;
+        background-color: white;
+    }
+    
+    button {
+        margin-top: 2rem;
+        background-color: #02AA6D;
+        ;
+        border-radius: 1rem;
+        border: none;
+        padding: 0.5rem;
+        color: white;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        border: solid grey 1px;
+        background-color: darkgreen;
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+        border-radius: 1rem;
+        padding: 0.4rem;
+        outline: none;
+    }
+    
+    input[type="email"]:valid,
+    input[type="password"]:valid {
+        border: solid green 3px;
+    }
+    
+    @media screen and (max-width: 700px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem;
+        }
+        textarea {
+            max-width: 15rem;
+        }
+    }
+    
+    @media screen and (max-width: 992px) {
+        textarea {
+            width: 35rem;
+        }
+    }

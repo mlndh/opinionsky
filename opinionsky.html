@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="opinionsky.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+    <title>Opinionsky</title>
+</head>
+
+<body>
+    <main>
+        <img src="img/user.svg" class="hideWhenSignedIn hover" onclick="showSignInForm()">
+        <img src="img/sign-out-alt.svg" class="hideWhenSignedOut hover" onclick="signOut()">
+        <h1>HELLO<br> <span id="userName"> WORLD</span></h1>
+
+        <div class="container">Messages will appear here
+            <p id="list"></p>
+        </div>
+        <p class="hideWhenSignedIn">This is a page just for fun where you can register an account via firebase and write whatever is on your mind.<br> It is anonymous but you can see other peoples messages.</p>
+        <h3 class="hideWhenSignedIn hover" onclick="showSignInForm()"><u>Sign in or up</u> to write message</h3>
+        <form id="contactForm" class="hideWhenSignedOut">
+
+            <label for="message"></label><br>
+            <textarea name="message" rows="5" id="message" maxlength="350" placeholder="Write something..." required></textarea>
+            <br>
+            <input type="submit" value=" ">
+            <input type="reset" value=" ">
+        </form>
+
+        <form class="hide hideWhenSignedIn signInForm" onSubmit="return false">
+            <span onclick="closeSignInForm()">&times;</span>
+
+            <!-- <label for=" name ">Name:</label><br>
+        <input type="text " id="name " name="name " required><br> -->
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" autocomplete="off" required><br>
+            <label for="pword">Password:</label><br>
+            <input type="password" id="pword" name="pword" autocomplete="off" minlength="5" required><br>
+            <button onclick="signUpWithEmailPassword() ">Create account</button>
+            <button onclick="signInWithEmailPassword() ">Sign in</button>
+
+        </form>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js "></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js "></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js "></script>
+    <script src="opinionsky.js "></script>
+</body>
+
+</html>
